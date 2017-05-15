@@ -107,6 +107,7 @@ body {
 }
 
 .footer {
+    margin-top: 10rem;
     padding:4rem 0;
     text-align: center;
     color: white;
@@ -123,8 +124,6 @@ body {
 .footing {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap-reverse;
     padding: 1rem 2rem;
 }
 .contact a{
@@ -160,5 +159,8 @@ a:hover {
     }
     .contact{
       font-size: 0.8rem;
+    }
+    .footer{
+      margin: 0;
     }
 }
