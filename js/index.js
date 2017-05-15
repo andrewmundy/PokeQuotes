@@ -87,7 +87,7 @@ $(document).ready(function() {
             $("#img").one("click", function() {
                 var rq = Math.floor(Math.random() * message.length);
                 $(".message").empty().append(`"${message[rq]}${punk[r]}"`);
-                $(".message").append(`- <a href="http://www.pokemon.com/us/pokedex/${name}"class="less">${name}`);
+                $(".message").append(`<p>- <a href="http://www.pokemon.com/us/pokedex/${name}"class="less">${name}</p>`);
             });
         });
     };
