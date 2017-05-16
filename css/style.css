@@ -208,10 +208,11 @@ a:hover {
 }
 
 /* ------ Mobile ------ */
-@media (min-device-width: 100px) and (max-device-width: 400px) {
+@media (min-device-width: 100px) and (max-device-width: 500px) {
     .contents {
       padding: 0;
       max-width: 100%;
+      height: auto;
     }
     div.message{
       font-size: 0.8rem;
@@ -221,7 +222,6 @@ a:hover {
     }
     #getQuote{
       margin: 0.5rem auto;
-      padding: 0.8rem 0.8rem 2.5rem;
     }
     .contact{
       font-size: 0.8rem;
