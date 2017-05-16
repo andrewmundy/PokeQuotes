@@ -29,11 +29,13 @@ a{
 }
 
 .contents {
-    width: 800px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 900px;
     margin: auto;
     position: relative;
     overflow-x: hidden;
     text-align: center;
+    height: 100vh;
 }
 
 body {
@@ -108,7 +110,7 @@ body {
   border: solid #171717;
   background: rgba(255, 255, 255, 0.06);
   color: #4e4e4e;
-  padding: 0.5rem;
+  padding: 0.4rem 0.2rem 0.7rem;
   font-family: inherit;
   -webkit-box-shadow: 0rem 0.5rem rgba(0, 0, 0, 0.4);
   box-shadow: 0rem 0.5rem rgba(0, 0, 0, 0.5);
@@ -128,26 +130,40 @@ body {
     animation: hvr-buzz-out 1s infinite;
 }
 
+#point{
+  display: none;
+}
+
 .pop {
     -webkit-animation: hvr-bob 2s infinite;
     animation: hvr-bob 2s infinite;
     text-shadow: 0px 3px 4px black;
 }
 
+#loader{
+  display: block;
+}
 .footer {
-    margin-top: 10rem;
-    padding:4rem 0;
-    text-align: center;
-    color: white;
+  margin-top: 10rem;
+  padding:4rem 0;
+  text-align: center;
+  color: white;
 }
 .copy{
   color:rgba(255,225,255, 0.2);
   text-shadow:-1px 1px 0px rgba(0,0,0,0.2);
 }
 .contact {
+    color:rgba(255,225,255, 0.2);
     line-height: 1.5rem;
     font-size: 1rem;
     text-align: left;
+}
+.jack{
+  color:rgba(255,225,255, 0.2);
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  text-align: center;
 }
 .footing {
     display: -webkit-box;
@@ -157,6 +173,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 1rem 2rem;
+    flex-wrap: wrap;
 }
 .contact a{
   color:rgba(255,225,255, 0.2);
@@ -193,7 +210,8 @@ a:hover {
 /* ------ Mobile ------ */
 @media (min-device-width: 100px) and (max-device-width: 400px) {
     .contents {
-        max-width: 100%;
+      padding: 0;
+      max-width: 100%;
     }
     div.message{
       font-size: 0.8rem;
@@ -203,6 +221,7 @@ a:hover {
     }
     #getQuote{
       margin: 0.5rem auto;
+      padding: 0.8rem 0.8rem 2.5rem;
     }
     .contact{
       font-size: 0.8rem;
@@ -210,4 +229,8 @@ a:hover {
     .footer{
       margin: 0;
     }
+    .jack{
+      font-size: 0.7rem;
+    }
+
 }
