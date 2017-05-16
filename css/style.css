@@ -2,18 +2,30 @@ body {
     font-family: '-apple-system', 'BlinkMacSystemFont', sans-serif;
 }
 
-h3 {
-    font-family: 'Lato', sans-serif;
-}
-
 small {
     font-weight: 200;
     color: rgba(255, 255, 255, 0.5)
 }
 
 div.message {
-    font-family: 'Cinzel', serif;
     font-size: 1.5rem;
+}
+.message {
+  font-weight: 300;
+  border-radius: .2rem;
+  padding: 1rem;
+  border: solid #171717;
+  margin: 1rem;
+  color: #fff;
+  background: rgba(0,0,0,0.1);
+  text-shadow: -2px 2px 0 #171717, -3px 3px 0 #171717, -4px 4px 0 #171717;
+  -webkit-box-shadow: inset 0px 7px 0 #171717;
+  box-shadow: inset 0px 7px 0 #171717;
+}
+
+a{
+  color:grey !important;
+  text-decoration: none !important;
 }
 
 .contents {
@@ -29,20 +41,36 @@ body {
 }
 
 .flex-space-around{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-center{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-column{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #img {
@@ -53,44 +81,43 @@ body {
     -webkit-animation: hvr-buzz-out 20s infinite;
     animation: hvr-buzz-out 20s infinite;
 }
-
 #zoom {
     display: block;
     position: absolute;
     zoom: 550%;
     top: -10%;
     z-index: -1;
-    -webkit-filter: blur(1.5px) opacity(20%) grayscale(200%) contrast(150%);
-    filter: blur(1.5px) opacity(20%) grayscale(200%) contrast(150%);
+    -webkit-filter: blur(1.5px);
+    -webkit-filter: opacity(20%);
+    -webkit-filter: contrast(150%);
+    -webkit-filter: grayscale(200%);
+    filter: blur(1px) opacity(20%) contrast(150%) grayscale(200%);
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */
 }
 
 #getQuote {
   border: solid #171717;
   background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255,0.5);
-  text-shadow: -2px 2px 1px rgba(0,0,0,0.2);
-  font-size: 2;
+  color: #4e4e4e;
   padding: 0.5rem;
-  margin: 0.5rem auto;
   font-family: inherit;
   -webkit-box-shadow: 0rem 0.5rem rgba(0, 0, 0, 0.4);
   box-shadow: 0rem 0.5rem rgba(0, 0, 0, 0.5);
-  margin: 1rem;
-  padding: 0.8rem;
-  font-weight: 400;
+  margin: 0.2rem 1rem;
+  padding: 1rem;
+  font-weight: bold;
   font-style: italic;
   cursor: pointer;
-}
-
-.message {
-    background: url("http://api.thumbr.it/whitenoise-361x370.png?background=1e1e1e&noise=626262&density=53&opacity=15");
-    border-radius: .2rem;
-    padding: 1rem;
-    border: solid #171717;
-    margin: 1rem;
-    color: #fff;
-    text-shadow: 2px 2px 5px black;
-    box-shadow: inset 0px 7px 0 #171717;
+  text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.4);
 }
 
 .loader {
@@ -123,8 +150,12 @@ body {
     text-align: left;
 }
 .footing {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1rem 2rem;
 }
 .contact a{
@@ -144,6 +175,21 @@ a:hover {
 .logo-lower{
   width: 10px;
 }
+
+.button-press {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform box-shadow;
+    transition-timing-function: ease-out;
+}
+.button-press:hover, .button-press:focus, .button-press:active {
+    transform: translateY(3px);
+    box-shadow: 0rem 0.2rem rgba(0, 0, 0, 0.5), 0rem 0.5rem 1rem rgb(33, 33, 33) !important;
+}
+
 /* ------ Mobile ------ */
 @media (min-device-width: 100px) and (max-device-width: 400px) {
     .contents {
