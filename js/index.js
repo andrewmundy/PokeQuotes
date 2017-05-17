@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     function thing() {
         let random = num => Math.ceil((Math.random() * num) -1);
         //
@@ -28,6 +29,7 @@ $(document).ready(function() {
                 let randQuote = [String(backSlice), String(frontSlice), String(bigSlice), ""];
                 return randQuote[r];
             }
+            
             let punk = ["!", "?", "!?", "!!!", "."];
             let quoteQuote = `"${randomQuote()} ${randomQuote()} ${randomQuote()} ${randomQuote()} ${randomQuote()} ${randomQuote()} ${randomQuote()} ${randomQuote()}${punk[r]}"`;
 
@@ -41,6 +43,7 @@ $(document).ready(function() {
             $("#zoom").empty().append(`<img class="img-responsive center-block greyscale" src="${sprite}"></a>`);
             $("#img").empty().append(`<img class="img-responsive hvr-buzz-out hvr-float-shadow"src="${sprite}"></a>`);
             $("#point").css('display','block');
+
             $("#img").one("click", function() {
               $.getJSON("https://api.mlab.com/api/1/databases/jackhandeyapi/collections/quotes?apiKey=gViXTt2ltpcF0a-Ot-Glb5w577mRXb0p").then(function(data){
                 let dataStr = data[0].jackhandey
